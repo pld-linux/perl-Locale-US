@@ -1,16 +1,16 @@
 #
 # Conditional build:
-%bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Locale
 %define		pnam	US
 Summary:	Two letter codes for state identification in the United States and vice versa
+Summary(pl.UTF-8):	Dwuliterowe kody do identyfikacji stanów w USA
 Name:		perl-Locale-US
 Version:	1.1
 Release:	1
-License:	GPL
+License:	unknown (Copyright 2003 T. M. Brannon)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Locale/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b72913df238e06073d3d019101d682d9
@@ -24,6 +24,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This distribution contains a module which can be used to process USPS
 two letter codes for states in the United States and surrounding
 territories.
+
+%description -l pl.UTF-8
+Ten pakiet zawiera moduł służący do przetwarzania dwuliterowych kodów
+USPS dla stanów USA i otaczających terytoriów.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
