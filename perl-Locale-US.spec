@@ -9,7 +9,7 @@ Summary:	Two letter codes for state identification in the United States and vice
 Summary(pl.UTF-8):	Dwuliterowe kody do identyfikacji stanów w USA
 Name:		perl-Locale-US
 Version:	1.2
-Release:	1
+Release:	2
 License:	unknown (Copyright 2003 T. M. Brannon)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Locale/%{pdir}-%{pnam}-%{version}.tar.gz
