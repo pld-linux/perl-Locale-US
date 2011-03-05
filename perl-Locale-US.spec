@@ -10,7 +10,8 @@ Summary(pl.UTF-8):	Dwuliterowe kody do identyfikacji stanów w USA
 Name:		perl-Locale-US
 Version:	1.2
 Release:	2
-License:	unknown (Copyright 2003 T. M. Brannon)
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Locale/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d748870d0b657f78d7ea044cbf35eacc
@@ -33,7 +34,6 @@ USPS dla stanów USA i otaczających terytoriów.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 
@@ -55,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/Locale/US.pm
 %{perl_vendorlib}/Locale/kruft2codes.pl
-%{_mandir}/man3/*
+%{_mandir}/man3/Locale::US.3pm*
