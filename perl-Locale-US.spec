@@ -8,16 +8,21 @@
 Summary:	Two letter codes for state identification in the United States and vice versa
 Summary(pl.UTF-8):	Dwuliterowe kody do identyfikacji stanów w USA
 Name:		perl-Locale-US
-Version:	1.2
-Release:	2
+Version:	2.112150
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Locale/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	d748870d0b657f78d7ea044cbf35eacc
+# Source0-md5:	61adcf5097a87dea84c2a987f81cb2d9
 URL:		http://search.cpan.org/dist/Locale-US/
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-Data-Section-Simple
+BuildRequires:	perl-Test-Simple
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
