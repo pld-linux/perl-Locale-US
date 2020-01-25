@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Locale
 %define		pnam	US
 Summary:	Two letter codes for state identification in the United States and vice versa
