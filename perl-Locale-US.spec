@@ -1,23 +1,24 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Locale
 %define		pnam	US
 Summary:	Two letter codes for state identification in the United States and vice versa
 Summary(pl.UTF-8):	Dwuliterowe kody do identyfikacji stanów w USA
 Name:		perl-Locale-US
-Version:	2.112150
-Release:	2
+Version:	3.04
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Locale/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	61adcf5097a87dea84c2a987f81cb2d9
-URL:		http://search.cpan.org/dist/Locale-US/
+# Source0-md5:	20e475b152decc459d5b736dc6964b65
+URL:		https://metacpan.org/release/Locale-US
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Data-Section-Simple
 BuildRequires:	perl-Test-Simple
